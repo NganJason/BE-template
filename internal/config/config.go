@@ -36,7 +36,10 @@ func initConfigs() error {
 	return nil
 }
 
-func fetchConfigFromFile(filePath string, configStruct interface{}) (error) {
+func fetchConfigFromFile(
+	filePath string, 
+	configStruct interface{},
+) (error) {
 	configFile, _ := os.Open(filePath)
 	defer configFile.Close()
 

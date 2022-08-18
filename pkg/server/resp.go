@@ -57,7 +57,10 @@ func JsonResponse(
 	}
 }
 
-func setDebugMsg(payload interface{}, err error) {
+func setDebugMsg(
+	payload interface{}, 
+	err error,
+) {
 	if payload == nil || err == nil {
 		return
 	}
