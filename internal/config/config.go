@@ -9,13 +9,13 @@ import (
 	"github.com/NganJason/BE-template/pkg/cerr"
 )
 
-type Config struct {
-	SampleDB *Database `json:"sample_db"`
-}
-
 var (
 	GlobalConfig *Config
 )
+
+type Config struct {
+	SampleDB *Database `json:"sample_db"`
+}
 
 func GetConfig() *Config {
 	return GlobalConfig
