@@ -76,11 +76,11 @@ func Errorf(ctx context.Context, msg string, v ...interface{}) {
 }
 
 func Fatal(ctx context.Context, msg string) {
-	if minLevel < LevelFatal {
+	if minLevel > LevelFatal {
 		return
 	}
 
-	log.Println(formatLogger(ctx, LevelFatal, msg))
+	log.Fatal(formatLogger(ctx, LevelFatal, msg))
 }
 
 func formatLogger(ctx context.Context, logLevel int, msg string, v ...interface{}) string {

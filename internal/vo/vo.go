@@ -13,7 +13,7 @@ type CommonResponse struct {
 }
 
 type HealthCheckRequest struct {
-	Message string
+	Message string `json:"message"`
 }
 
 type HealthCheckResponse struct {

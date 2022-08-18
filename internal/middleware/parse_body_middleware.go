@@ -15,12 +15,12 @@ import (
 	"github.com/NganJason/BE-template/pkg/server"
 )
 
-type ValidateBodyMiddleware struct {
+type ParseBodyMiddleware struct {
 	server.SkipMiddleware
 	server.EmptyPostMiddleware
 }
 
-func (*ValidateBodyMiddleware) PreRequest(handler server.Handler) server.Handler {
+func (*ParseBodyMiddleware) PreRequest(handler server.Handler) server.Handler {
 	return func(ctx context.Context, writer http.ResponseWriter, req *http.Request) *server.HandlerResp {
 		requestStruct := ctx.Value(server.CtxRequestStruct)
 		var reqPayload interface{}
